@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Entity Recognition (NER)</title>
+</head>
+<body>
+    <h1>Named Entity Recognition (NER)</h1>
+    <p>NER is the task of identifying and classifying named entities (e.g., names, dates, locations) in text.</p>
+
+    <h2>Python Example: NER with spaCy</h2>
+    <pre><code class="python">
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+text = "Apple is looking at buying U.K. startup for $1 billion."
+doc = nlp(text)
+
+for ent in doc.ents:
+    print(ent.text, ent.label_)
+    </code></pre>
+    <p><strong>Output:</strong> Apple ORG, U.K. GPE, $1 billion MONEY</p>
+</body>
+</html>

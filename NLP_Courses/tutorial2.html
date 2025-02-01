@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Preprocessing</title>
+</head>
+<body>
+    <h1>Text Preprocessing</h1>
+    <p>Text preprocessing is a crucial step in NLP that involves cleaning and preparing text data for analysis. Common steps include removing special characters, lowercasing, and handling whitespace.</p>
+
+    <h2>Python Example: Cleaning Text</h2>
+    <pre><code class="python">
+import re
+
+text = "Hello! This is a sample text with numbers 123 and symbols #@$."
+cleaned_text = re.sub(r'[^a-zA-Z\s]', '', text)  # Remove special characters and numbers
+cleaned_text = cleaned_text.lower()  # Convert to lowercase
+print("Cleaned Text:", cleaned_text)
+    </code></pre>
+    <p><strong>Output:</strong> Cleaned Text: hello this is a sample text with numbers and symbols</p>
+</body>
+</html>

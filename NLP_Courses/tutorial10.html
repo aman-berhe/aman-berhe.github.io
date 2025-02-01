@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <p>Sentiment analysis determines the emotional tone of text, such as positive, negative, or neutral.</p>
+
+    <h2>Python Example: Sentiment Analysis with TextBlob</h2>
+    <pre><code class="python">
+from textblob import TextBlob
+
+text = "I love NLP! It's amazing."
+blob = TextBlob(text)
+print("Sentiment Polarity:", blob.sentiment.polarity)
+    </code></pre>
+    <p><strong>Output:</strong> Sentiment Polarity: 0.5 (positive sentiment)</p>
+</body>
+</html>

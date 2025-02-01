@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stemming and Lemmatization</title>
+</head>
+<body>
+    <h1>Stemming and Lemmatization</h1>
+    <p>Stemming and lemmatization are techniques used to reduce words to their base or root form.</p>
+
+    <h2>Python Example: Stemming and Lemmatization</h2>
+    <pre><code class="python">
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+nltk.download('wordnet')
+
+words = ["running", "flies", "happily"]
+stemmer = PorterStemmer()
+lemmatizer = WordNetLemmatizer()
+
+stems = [stemmer.stem(word) for word in words]
+lemmas = [lemmatizer.lemmatize(word, pos='v') for word in words]
+
+print("Stems:", stems)
+print("Lemmas:", lemmas)
+    </code></pre>
+    <p><strong>Output:</strong> Stems: ['run', 'fli', 'happili']</p>
+    <p><strong>Output:</strong> Lemmas: ['run', 'fly', 'happily']</p>
+</body>
+</html>

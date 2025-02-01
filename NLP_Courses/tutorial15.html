@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answering</title>
+</head>
+<body>
+    <h1>Question Answering</h1>
+    <p>Question answering systems retrieve answers to questions from a given context.</p>
+
+    <h2>Python Example: QA with Hugging Face</h2>
+    <pre><code class="python">
+from transformers import pipeline
+
+qa_pipeline = pipeline("question-answering")
+context = "Natural Language Processing (NLP) is a field of AI focused on human language."
+question = "What is NLP?"
+result = qa_pipeline(question=question, context=context)
+print("Answer:", result['answer'])
+    </code></pre>
+    <p><strong>Output:</strong> Answer: a field of AI focused on human language</p>
+</body>
+</html>

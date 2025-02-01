@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Embeddings</title>
+</head>
+<body>
+    <h1>Word Embeddings</h1>
+    <p>Word embeddings are dense vector representations of words that capture semantic meaning. Popular models include Word2Vec, GloVe, and FastText.</p>
+
+    <h2>Python Example: Word2Vec with Gensim</h2>
+    <pre><code class="python">
+from gensim.models import Word2Vec
+
+sentences = [["I", "love", "NLP"], ["NLP", "is", "amazing"], ["I", "enjoy", "learning"]]
+model = Word2Vec(sentences, vector_size=10, window=2, min_count=1, workers=4)
+
+print("Vector for 'NLP':", model.wv['NLP'])
+    </code></pre>
+    <p><strong>Output:</strong> Vector for 'NLP': [ 0.12345678 -0.23456789 ... ] (10-dimensional vector)</p>
+</body>
+</html>

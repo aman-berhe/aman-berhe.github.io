@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to NLP</title>
+</head>
+<body>
+    <h1>Introduction to Natural Language Processing (NLP)</h1>
+    <p>Natural Language Processing (NLP) is a field of artificial intelligence that focuses on the interaction between computers and humans through natural language. It enables machines to understand, interpret, and generate human language.</p>
+    
+    <h2>Applications of NLP</h2>
+    <ul>
+        <li>Chatbots</li>
+        <li>Sentiment Analysis</li>
+        <li>Machine Translation</li>
+        <li>Text Summarization</li>
+    </ul>
+
+    <h2>Python Example: Tokenizing a Sentence</h2>
+    <pre><code class="python">
+import nltk
+nltk.download('punkt')
+
+sentence = "Hello, welcome to the world of NLP!"
+tokens = nltk.word_tokenize(sentence)
+print("Tokens:", tokens)
+    </code></pre>
+    <p><strong>Output:</strong> Tokens: ['Hello', ',', 'welcome', 'to', 'the', 'world', 'of', 'NLP', '!']</p>
+</body>
+</html>

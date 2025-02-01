@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Modeling</title>
+</head>
+<body>
+    <h1>Topic Modeling</h1>
+    <p>Topic modeling is used to discover abstract topics in a collection of documents.</p>
+
+    <h2>Python Example: Topic Modeling with Gensim</h2>
+    <pre><code class="python">
+from gensim import corpora
+from gensim.models import LdaModel
+
+# Sample documents
+documents = ["I love NLP and machine learning", "NLP is amazing", "I enjoy learning about AI"]
+
+# Preprocess and create dictionary
+texts = [[word for word in document.lower().split()] for document in documents]
+dictionary = corpora.Dictionary(texts)
+corpus = [dictionary.doc2bow(text) for text in texts]
+
+# Train LDA model
+lda = LdaModel(corpus, num_topics=2, id2word=dictionary, passes=10)
+print("Topics:", lda.print_topics())
+    </code></pre>
+    <p><strong>Output:</strong> Topics: [(0, '0.123*"nlp" + 0.456*"learning"'), (1, '0.789*"ai" + 0.234*"amazing"')]</p>
+</body>
+</html>

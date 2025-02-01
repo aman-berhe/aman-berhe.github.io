@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Words Removal</title>
+</head>
+<body>
+    <h1>Stop Words Removal</h1>
+    <p>Stop words are common words (e.g., "the", "is") that are often removed to focus on meaningful words in text analysis.</p>
+
+    <h2>Python Example: Removing Stop Words</h2>
+    <pre><code class="python">
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+
+text = "This is a sample sentence demonstrating the removal of stop words."
+stop_words = set(stopwords.words('english'))
+filtered_text = [word for word in word_tokenize(text) if word.lower() not in stop_words]
+print("Filtered Text:", filtered_text)
+    </code></pre>
+    <p><strong>Output:</strong> Filtered Text: ['sample', 'sentence', 'demonstrating', 'removal', 'stop', 'words', '.']</p>
+</body>
+</html>

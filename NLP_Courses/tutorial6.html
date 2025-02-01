@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag of Words and TF-IDF</title>
+</head>
+<body>
+    <h1>Bag of Words and TF-IDF</h1>
+    <p>Bag of Words (BoW) and TF-IDF are techniques to convert text into numerical representations for machine learning.</p>
+
+    <h2>Python Example: BoW and TF-IDF</h2>
+    <pre><code class="python">
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+
+documents = ["I love NLP", "NLP is amazing", "I enjoy learning NLP"]
+vectorizer = CountVectorizer()
+tfidf = TfidfVectorizer()
+
+bow_matrix = vectorizer.fit_transform(documents)
+tfidf_matrix = tfidf.fit_transform(documents)
+
+print("BoW Matrix:\n", bow_matrix.toarray())
+print("TF-IDF Matrix:\n", tfidf_matrix.toarray())
+    </code></pre>
+    <p><strong>Output:</strong> BoW Matrix: [[1 0 1 1 0], [0 1 1 0 1], [1 0 0 1 1]]</p>
+    <p><strong>Output:</strong> TF-IDF Matrix: [[0.57735027 0.         0.57735027 0.57735027 0.        ], [0.         0.57735027 0.57735027 0.         0.57735027], [0.57735027 0.         0.         0.57735027 0.57735027]]</p>
+</body>
+</html>
