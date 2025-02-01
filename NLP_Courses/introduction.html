@@ -4,28 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction to NLP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        
+        .course-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8e8e8;
+            border-radius: 5px;
+        }
+        .course-list a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        } 
+        
+        .course-list a:hover {
+            background-color: #dcdcdc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Introduction to Natural Language Processing (NLP)</h1>
-    <p>Natural Language Processing (NLP) is a field of artificial intelligence that focuses on the interaction between computers and humans through natural language. It enables machines to understand, interpret, and generate human language.</p>
     
-    <h2>Applications of NLP</h2>
-    <ul>
-        <li>Chatbots</li>
-        <li>Sentiment Analysis</li>
-        <li>Machine Translation</li>
-        <li>Text Summarization</li>
-    </ul>
+            <header>
+                <h1>Courses</h1>
+                <nav>
+                    <ul class="header-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </nav>
+            </header>
+        <main>
+        <div class="layout"> 
+        <div class="container">
+            <section id="about">
+            <h1>NLP Tutorials</h1>
+            <p>Welcome to the step-by-step NLP tutorials. Follow each tutorial to build your knowledge from basic to advanced concepts in Natural Language Processing.</p>
+            
+            <h2>Step-by-Step Tutorials</h2>
+            <ol class="course-list">
+                <li><a href="NLP_Courses/introduction.html"> Introduction to NLP</a></li>
+                <li><a href="NLP_Courses/tutorial2.html">Text Preprocessing</a></li>
+                <li><a href="NLP_Courses/tutorial3.html">Tokenization</a></li>
+                <li><a href="NLP_Courses/tutorial4.html">Stop Words Removal</a></li>
+                <li><a href="NLP_Courses/tutorial5.html">Stemming and Lemmatization</a></li>
+                <li><a href="NLP_Courses/tutorial6.html">Bag of Words and TF-IDF</a></li>
+                <li><a href="NLP_Courses/tutorial7.html"> Word Embeddings</a></li>
+                <li><a href="NLP_Courses/tutorial8.html">Named Entity Recognition (NER)</a></li>
+                <li><a href="NLP_Courses/tutorial9.html">Sentiment Analysis</a></li>
+                <li><a href="NLP_Courses/tutorial10.html">Text Classification</a></li>
+                <li><a href="NLP_Courses/tutorial11.html">Topic Modeling</a></li>
+                <li><a href="NLP_Courses/tutorial12.html">Machine Translation</a></li>
+                <li><a href="NLP_Courses/tutorial13.html">Text Summarization</a></li>
+                <li><a href="NLP_Courses/tutorial14.html">Question Answering</a></li>
+                <li><a href="NLP_Courses/tutorial15.html">Advanced NLP with Transformers</a></li>
+            </ol>
+            </section>
+        </div>
 
-    <h2>Python Example: Tokenizing a Sentence</h2>
-    <pre><code class="python">
-import nltk
-nltk.download('punkt')
+        <div class="container">
+            <section id="about">
+            <h1>Introduction to Natural Language Processing (NLP)</h1>
+            <p>Natural Language Processing (NLP) is a field of artificial intelligence that focuses on the interaction between computers and humans through natural language. It enables machines to understand, interpret, and generate human language.</p>
+            
+            <h2>Applications of NLP</h2>
+            <ul>
+                <li>Chatbots</li>
+                <li>Sentiment Analysis</li>
+                <li>Machine Translation</li>
+                <li>Text Summarization</li>
+            </ul>
 
-sentence = "Hello, welcome to the world of NLP!"
-tokens = nltk.word_tokenize(sentence)
-print("Tokens:", tokens)
-    </code></pre>
-    <p><strong>Output:</strong> Tokens: ['Hello', ',', 'welcome', 'to', 'the', 'world', 'of', 'NLP', '!']</p>
+            <h2>Python Example: Tokenizing a Sentence</h2>
+            <pre><code class="python">
+                import nltk
+                nltk.download('punkt')
+
+                sentence = "Hello, welcome to the world of NLP!"
+                tokens = nltk.word_tokenize(sentence)
+                print("Tokens:", tokens)
+            </code></pre>
+            <p><strong>Output:</strong> Tokens: ['Hello', ',', 'welcome', 'to', 'the', 'world', 'of', 'NLP', '!']</p>
+            </section>
+        </div>
+        <footer>
+            <p class="footer">&copy; 2024 Aman BERHE. All rights reserved.</p>
+        </footer>
+        </div>
+    </main>
 </body>
 </html>

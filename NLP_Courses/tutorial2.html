@@ -4,20 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Preprocessing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        
+        .course-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8e8e8;
+            border-radius: 5px;
+        }
+        .course-list a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        } 
+        
+        .course-list a:hover {
+            background-color: #dcdcdc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Text Preprocessing</h1>
-    <p>Text preprocessing is a crucial step in NLP that involves cleaning and preparing text data for analysis. Common steps include removing special characters, lowercasing, and handling whitespace.</p>
+    <header>
+        <h1>Courses</h1>
+        <nav>
+            <ul class="header-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="courses.html">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="layout"> 
+            <div class="container">
+                <section id="about">
+                <h1>NLP Tutorials</h1>
+                <p>Welcome to the step-by-step NLP tutorials. Follow each tutorial to build your knowledge from basic to advanced concepts in Natural Language Processing.</p>
+                
+                <h2>Step-by-Step Tutorials</h2>
+                <ol class="course-list">
+                    <li><a href="NLP_Courses/introduction.html"> Introduction to NLP</a></li>
+                    <li><a href="NLP_Courses/tutorial2.html">Text Preprocessing</a></li>
+                    <li><a href="NLP_Courses/tutorial3.html">Tokenization</a></li>
+                    <li><a href="NLP_Courses/tutorial4.html">Stop Words Removal</a></li>
+                    <li><a href="NLP_Courses/tutorial5.html">Stemming and Lemmatization</a></li>
+                    <li><a href="NLP_Courses/tutorial6.html">Bag of Words and TF-IDF</a></li>
+                    <li><a href="NLP_Courses/tutorial7.html"> Word Embeddings</a></li>
+                    <li><a href="NLP_Courses/tutorial8.html">Named Entity Recognition (NER)</a></li>
+                    <li><a href="NLP_Courses/tutorial9.html">Sentiment Analysis</a></li>
+                </ol>
+                </section>
+            </div>
+        <div class="container">
+            <section id="about">
+            <h1>Text Preprocessing</h1>
+            <p>Text preprocessing is a crucial step in NLP that involves cleaning and preparing text data for analysis. Common steps include removing special characters, lowercasing, and handling whitespace.</p>
 
-    <h2>Python Example: Cleaning Text</h2>
-    <pre><code class="python">
-import re
+            <h2>Python Example: Cleaning Text</h2>
+            <pre><code class="python">
 
-text = "Hello! This is a sample text with numbers 123 and symbols #@$."
-cleaned_text = re.sub(r'[^a-zA-Z\s]', '', text)  # Remove special characters and numbers
-cleaned_text = cleaned_text.lower()  # Convert to lowercase
-print("Cleaned Text:", cleaned_text)
-    </code></pre>
-    <p><strong>Output:</strong> Cleaned Text: hello this is a sample text with numbers and symbols</p>
+            import re
+
+            text = "Hello! This is a sample text with numbers 123 and symbols #@$."
+            cleaned_text = re.sub(r'[^a-zA-Z\s]', '', text)  # Remove special characters and numbers
+            cleaned_text = cleaned_text.lower()  # Convert to lowercase
+            print("Cleaned Text:", cleaned_text)
+                </code></pre>
+                <p><strong>Output:</strong> Cleaned Text: hello this is a sample text with numbers and symbols</p>
+            </section>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2021 NLP Tutorials. All rights reserved.</p>
+    </footer>
+    
 </body>
 </html>

@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*flex: 1;*/
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    width: 50%;
+    height: 800px; /* Set the height of the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.container2 {
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    width: 50%;
+}
+
+header{
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+cv{
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+section#about {
+    text-align: center;
+}
+
+section#about img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.left-frame {
+    flex: 1;
+}
+
+.right-frame {
+    flex: 3;
+}
+
+
+.frame {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    /*margin-top: 80px; /* Ensure there is space for the fixed header */
+    height: 800px;/*calc(100vh - 80px);  Adjust for header height */
+    overflow-y: auto; /* Prevent layout from scrolling */
+}
+
+.frame-short {
+    align-items: left;
+    background-color: whitesmoke;
+    border-radius: 1px;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+.social-media-cv {
+    width: 100px; /* typical size for Twitter profile image */
+    height: 100px;
+}
+.social-media {
+    width: 25px; /* typical size for Twitter profile image */
+    height: 25px;
+}
+.norm-image{
+    width: 100%; /* Make image responsive */
+    max-width: 600px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */ 
+    display: block;
+    margin: 1rem auto;
+    border: 1px solid #ccc;
+}
+ol{
+    text-align: left;
+}
+
+
+.course-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-lis li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+}
+
+.course-lis a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+} 
+
+.nav-links.right-nav {
+    align-items: right;
+    text-align: right;
+}
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav ul li .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+    align-items: right;
+}
+.right-dropdown {
+    right: 0;
+}
+
+.lang_pref{
+    align-items: left;
+    align-content: left;
+    text-align: right;
+}
+
+th {
+    text-align: center;
+    list-style: solid;
+    border-bottom: 2px solid;
+}
+
+.cv_tab tr{
+    text-align: center;
+    list-style: solid;
+    border-bottom: 2px solid;
+}
+
+p{
+    text-align: left;
+    text-indent: 0%;
+}
+
+.footer{
+    text-align: center;
+}
+
+label {
+    margin: 1rem 1 0.2rem;
+}
+
+input, textarea {
+    padding: 1rem;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea{
+    padding: 1rem;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    height: 150px;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
