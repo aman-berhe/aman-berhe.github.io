@@ -3,27 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bag of Words and TF-IDF</title>
+    <title>Bag of Words and TF-IDF</title><link rel="stylesheet" href="css/style.css">
+    <style>
+        
+        .course-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8e8e8;
+            border-radius: 5px;
+        }
+        .course-list a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        } 
+        
+        .course-list a:hover {
+            background-color: #dcdcdc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bag of Words and TF-IDF</h1>
-    <p>Bag of Words (BoW) and TF-IDF are techniques to convert text into numerical representations for machine learning.</p>
+    <header>
+        <h1>Courses</h1>
+        <nav>
+            <ul class="header-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="courses.html">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="layout"> 
+        <div class="container">
+            <section id="about">
+            <h1>Bag of Words and TF-IDF</h1>
+            <p>Bag of Words (BoW) and TF-IDF are techniques to convert text into numerical representations for machine learning.</p>
+        
+            <h2>Python Example: BoW and TF-IDF</h2>
+            <pre><code class="python">
+                from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
-    <h2>Python Example: BoW and TF-IDF</h2>
-    <pre><code class="python">
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+                documents = ["I love NLP", "NLP is amazing", "I enjoy learning NLP"]
+                vectorizer = CountVectorizer()
+                tfidf = TfidfVectorizer()
 
-documents = ["I love NLP", "NLP is amazing", "I enjoy learning NLP"]
-vectorizer = CountVectorizer()
-tfidf = TfidfVectorizer()
+                bow_matrix = vectorizer.fit_transform(documents)
+                tfidf_matrix = tfidf.fit_transform(documents)
 
-bow_matrix = vectorizer.fit_transform(documents)
-tfidf_matrix = tfidf.fit_transform(documents)
-
-print("BoW Matrix:\n", bow_matrix.toarray())
-print("TF-IDF Matrix:\n", tfidf_matrix.toarray())
-    </code></pre>
-    <p><strong>Output:</strong> BoW Matrix: [[1 0 1 1 0], [0 1 1 0 1], [1 0 0 1 1]]</p>
-    <p><strong>Output:</strong> TF-IDF Matrix: [[0.57735027 0.         0.57735027 0.57735027 0.        ], [0.         0.57735027 0.57735027 0.         0.57735027], [0.57735027 0.         0.         0.57735027 0.57735027]]</p>
-</body>
+                print("BoW Matrix:\n", bow_matrix.toarray())
+                print("TF-IDF Matrix:\n", tfidf_matrix.toarray())
+            </code></pre>
+        <p><strong>Output:</strong> BoW Matrix: [[1 0 1 1 0], [0 1 1 0 1], [1 0 0 1 1]]</p>
+        <p><strong>Output:</strong> TF-IDF Matrix: [[0.57735027 0.         0.57735027 0.57735027 0.        ], [0.         0.57735027 0.57735027 0.         0.57735027], [0.57735027 0.         0.         0.57735027 0.57735027]]</p>
+        </section>
+    </div>
+    </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 NLP Tutorials. All Rights Reserved.</p>
+    </body>
 </html>

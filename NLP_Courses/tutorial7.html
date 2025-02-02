@@ -3,21 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Embeddings</title>
+    <title>Word Embeddings</title><link rel="stylesheet" href="css/style.css">
+    <style>
+        
+        .course-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8e8e8;
+            border-radius: 5px;
+        }
+        .course-list a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        } 
+        
+        .course-list a:hover {
+            background-color: #dcdcdc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Word Embeddings</h1>
-    <p>Word embeddings are dense vector representations of words that capture semantic meaning. Popular models include Word2Vec, GloVe, and FastText.</p>
+    <header>
+        <h1>Courses</h1>
+        <nav>
+            <ul class="header-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="courses.html">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="layout"> 
+        <div class="container">
+            <section id="about">
+            <h1>Word Embeddings</h1>
+            <p>Word embeddings are dense vector representations of words that capture semantic meaning. Popular models include Word2Vec, GloVe, and FastText.</p>
+         
+            <h2>Python Example: Word2Vec with Gensim</h2>
+            <pre><code class="python">
+    
+            from gensim.models import Word2Vec
 
-    <h2>Python Example: Word2Vec with Gensim</h2>
-    <pre><code class="python">
-from gensim.models import Word2Vec
+            sentences = [["I", "love", "NLP"], ["NLP", "is", "amazing"], ["I", "enjoy", "learning"]]
+            model = Word2Vec(sentences, vector_size=10, window=2, min_count=1, workers=4)
 
-sentences = [["I", "love", "NLP"], ["NLP", "is", "amazing"], ["I", "enjoy", "learning"]]
-model = Word2Vec(sentences, vector_size=10, window=2, min_count=1, workers=4)
-
-print("Vector for 'NLP':", model.wv['NLP'])
-    </code></pre>
-    <p><strong>Output:</strong> Vector for 'NLP': [ 0.12345678 -0.23456789 ... ] (10-dimensional vector)</p>
+            print("Vector for 'NLP':", model.wv['NLP'])
+            </code></pre>
+            <p><strong>Output:</strong> Vector for 'NLP': [ 0.12345678 -0.23456789 ... ] (10-dimensional vector)</p>
+        </section>
+    </div>
+    </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 NLP Tutorials. All Rights Reserved.</p>
 </body>
 </html>

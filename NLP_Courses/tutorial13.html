@@ -4,20 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Translation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .course-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8e8e8;
+            border-radius: 5px;
+        }
+        .course-list a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+        
+        .course-list a:hover {
+            background-color: #dcdcdc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Machine Translation</h1>
-    <p>Machine translation automates the translation of text from one language to another.</p>
+    <header>
+        <h1>Courses</h1>
+        <nav>
+            <ul class="header-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="courses.html">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="layout">
+    <div class="container">
+        <section id="about">
+        <h1>Machine Translation</h1>
+        <p>Machine translation automates the translation of text from one language to another.</p>
+        
+        <h2>Python Example: Translation with Hugging Face</h2>
+        <pre><code class="python">
+            from transformers import pipeline
 
-    <h2>Python Example: Translation with Hugging Face</h2>
-    <pre><code class="python">
-from transformers import pipeline
-
-translator = pipeline("translation_en_to_fr")
-text = "Hello, how are you?"
-translated = translator(text)
-print("Translated Text:", translated[0]['translation_text'])
-    </code></pre>
-    <p><strong>Output:</strong> Translated Text: Bonjour, comment ça va ?</p>
+            translator = pipeline("translation_en_to_fr")
+            text = "Hello, how are you?"
+            translated = translator(text)
+            print("Translated Text:", translated[0]['translation_text'])
+        </code></pre>
+        <p><strong>Output:</strong> Translated Text: Bonjour, comment ça va ?</p>
+        </section>
+    </div>
+    </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 NLP Tutorials. All Rights Reserved.</p>
 </body>
 </html>
