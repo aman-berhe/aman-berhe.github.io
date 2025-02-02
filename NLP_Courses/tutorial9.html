@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Named Entity Recognition (NER)</title>
+    <title>Sentiment Analysis</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        
         .course-list ul {
             list-style-type: none;
             padding: 0;
@@ -21,7 +20,7 @@
             text-decoration: none;
             color: #333;
             display: block;
-        } 
+        }
         
         .course-list a:hover {
             background-color: #dcdcdc;
@@ -43,30 +42,26 @@
         </nav>
     </header>
     <main>
-        <div class="layout"> 
-        <div class="container">
-            <section id="about">
-            <h1>Named Entity Recognition (NER)</h1>
-            <p>NER is the task of identifying and classifying named entities (e.g., names, dates, locations) in text.</p>
-            
-            <h2>Python Example: NER with spaCy</h2>
-            <pre><code class="python">
-                import spacy
+    <div class="layout">
+    <div class="container">
+        <section id="about">
+        <h1>Sentiment Analysis</h1>
+        <p>Sentiment analysis determines the emotional tone of text, such as positive, negative, or neutral.</p>
+        
+        <h2>Python Example: Sentiment Analysis with TextBlob</h2>
+        <pre><code class="python">
 
-                nlp = spacy.load("en_core_web_sm")
-                text = "Apple is looking at buying U.K. startup for $1 billion."
-                doc = nlp(text)
+            from textblob import TextBlob
 
-                for ent in doc.ents:
-                    print(ent.text, ent.label_)
-                </code></pre>
-                <p><strong>Output:</strong> Apple ORG, U.K. GPE, $1 billion MONEY</p>
-            </section>
-        </div>
-        </div>
+            text = "I love NLP! It's amazing."
+            blob = TextBlob(text)
+            print("Sentiment Polarity:", blob.sentiment.polarity)
+        </code></pre>
+        <p><strong>Output:</strong> Sentiment Polarity: 0.5 (positive sentiment)</p>
+        </section>
+    </div>
+    </div>
     </main>
-    <footer>
-        <p>&copy; 2024 NLP Tutorials. All Rights Reserved.</p>
-</body>
+    <p>&copy; 2024 NLP Tutorials. All Rights Reserved.</p>
 </body>
 </html>
