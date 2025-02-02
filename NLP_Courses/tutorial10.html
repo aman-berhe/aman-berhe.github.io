@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Additional Resources</title>
+    <title>Text Classification</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .course-list ul {
@@ -70,14 +70,28 @@
         </div>
     <div class="container">
         <section id="about">
-        <h1>Additional Resources</h1>
-        <ul>
-            <li><strong>Books:</strong> "Speech and Language Processing" by Daniel Jurafsky and James H. Martin</li>
-            <li><strong>Courses:</strong> Coursera's "Natural Language Processing Specialization"</li>
-            <li><strong>Communities:</strong> Hugging Face, NLP News, and Reddit's r/LanguageTechnology</li>
-        </ul>
-        <p>Stay updated with the latest trends and research in natural language processing by exploring these resources.</p>
-    </section>
+        <h1>Text Classification</h1>
+        <p>Text classification involves categorizing text into predefined classes, such as spam detection or topic labeling.</p>
+        
+        <h2>Python Example: Text Classification with Scikit-learn</h2>
+        <pre><code class="python">
+            from sklearn.feature_extraction.text import TfidfVectorizer
+            from sklearn.naive_bayes import MultinomialNB
+            from sklearn.pipeline import make_pipeline
+
+            # Sample data
+            texts = ["I love NLP", "This is spam", "NLP is amazing", "I hate spam"]
+            labels = ["positive", "spam", "positive", "spam"]
+
+            # Create a pipeline
+            model = make_pipeline(TfidfVectorizer(), MultinomialNB())
+            model.fit(texts, labels)
+
+            # Predict
+            print("Prediction:", model.predict(["I enjoy learning NLP"]))
+        </code></pre>
+        <p><strong>Output:</strong> Prediction: ['positive']</p>
+        </section>
     </div>
     <footer>
         <p class="footer">&copy; 2024 Aman BERHE. All rights reserved.</p>

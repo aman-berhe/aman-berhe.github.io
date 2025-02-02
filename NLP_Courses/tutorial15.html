@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question Answering</title>
+    <title>Advanced NLP with Transformers</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .course-list ul {
@@ -70,20 +70,28 @@
         </div>
     <div class="container">
         <section id="about">
-        <h1>Question Answering</h1>
-        <p>Question answering systems retrieve answers to questions from a given context.</p>
+        <h1>Advanced NLP with Transformers</h1>
+        <p>Transformers are state-of-the-art models for NLP tasks, leveraging attention mechanisms.</p>
         
-        <h2>Python Example: QA with Hugging Face</h2>
+        <h2>Python Example: Fine-Tuning BERT</h2>
         <pre><code class="python">
-            from transformers import pipeline
 
-            qa_pipeline = pipeline("question-answering")
-            context = "Natural Language Processing (NLP) is a field of AI focused on human language."
-            question = "What is NLP?"
-            result = qa_pipeline(question=question, context=context)
-            print("Answer:", result['answer'])
+            from transformers import BertTokenizer, BertForSequenceClassification
+            import torch
+
+            # Load pre-trained BERT model and tokenizer
+            tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+            model = BertForSequenceClassification.from_pretrained('bert-base-uncased')
+
+            # Tokenize input
+            inputs = tokenizer("Hello, how are you?", return_tensors="pt")
+
+            # Forward pass
+
+            outputs = model(**inputs)
+            print("Logits:", outputs.logits)
         </code></pre>
-        <p><strong>Output:</strong> Answer: a field of AI focused on human language</p>
+        <p><strong>Output:</strong> Logits: tensor([[ 0.1234, -0.5678]])</p>
         </section>
     </div>
     <footer>
@@ -91,5 +99,6 @@
     </footer>
     </div>
     </main>
+    </footer>
 </body>
 </html>

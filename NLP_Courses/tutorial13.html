@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Translation</title>
+    <title>Text Summarization</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .course-list ul {
@@ -59,7 +59,7 @@
                 <li><a href="tutorial7.html"> Word Embeddings</a></li>
                 <li><a href="tutorial8.html">Named Entity Recognition (NER)</a></li>
                 <li><a href="tutorial9.html">Sentiment Analysis</a></li>
-                <li><a href="tutorial10.html">Text Classification</a></li>
+                <li><a href="tutorial10.html">Text Generation</a></li>
                 <li><a href="tutorial11.html">Topic Modeling</a></li>
                 <li><a href="tutorial12.html">Machine Translation</a></li>
                 <li><a href="tutorial13.html">Text Summarization</a></li>
@@ -70,19 +70,21 @@
         </div>
     <div class="container">
         <section id="about">
-        <h1>Machine Translation</h1>
-        <p>Machine translation automates the translation of text from one language to another.</p>
+        <h1>Text Summarization</h1>
+        <p>Text summarization generates a concise summary of a longer text.</p>
         
-        <h2>Python Example: Translation with Hugging Face</h2>
+        <h2>Python Example: Summarization with Hugging Face</h2>
         <pre><code class="python">
+
             from transformers import pipeline
 
-            translator = pipeline("translation_en_to_fr")
-            text = "Hello, how are you?"
-            translated = translator(text)
-            print("Translated Text:", translated[0]['translation_text'])
+            summarizer = pipeline("summarization")
+            text = "Natural Language Processing is a fascinating field. It enables machines to understand and generate human language. NLP has applications in chatbots, sentiment analysis, and more."
+            summary = summarizer(text, max_length=30, min_length=10, do_sample=False)
+            print("Summary:", summary[0]['summary_text'])
+
         </code></pre>
-        <p><strong>Output:</strong> Translated Text: Bonjour, comment ça va ?</p>
+        <p><strong>Output:</strong> Summary: NLP is a fascinating field with applications in chatbots and sentiment analysis.</p>
         </section>
     </div>
     <footer>

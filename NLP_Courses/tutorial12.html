@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topic Modeling</title>
+    <title>Machine Translation</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .course-list ul {
@@ -35,7 +35,7 @@
         <nav>
             <ul class="header-list">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href=../cv.html">CV</a></li>
+                <li><a href="../cv.html">CV</a></li>
                 <li><a href="../publications.html">Publications</a></li>
                 <li><a href="../courses.html">Courses</a></li>
             </ul>
@@ -70,27 +70,19 @@
         </div>
     <div class="container">
         <section id="about">
-            <h1>Topic Modeling</h1>
-            <p>Topic modeling is used to discover abstract topics in a collection of documents.</p>
+        <h1>Machine Translation</h1>
+        <p>Machine translation automates the translation of text from one language to another.</p>
         
-            <h2>Python Example: Topic Modeling with Gensim</h2>
-            <pre><code class="python">
-                from gensim import corpora
-                from gensim.models import LdaModel
+        <h2>Python Example: Translation with Hugging Face</h2>
+        <pre><code class="python">
+            from transformers import pipeline
 
-                # Sample documents
-                documents = ["I love NLP and machine learning", "NLP is amazing", "I enjoy learning about AI"]
-
-                # Preprocess and create dictionary
-                texts = [[word for word in document.lower().split()] for document in documents]
-                dictionary = corpora.Dictionary(texts)
-                corpus = [dictionary.doc2bow(text) for text in texts]
-
-                # Train LDA model
-                lda = LdaModel(corpus, num_topics=2, id2word=dictionary, passes=10)
-                print("Topics:", lda.print_topics())
-            </code></pre>
-            <p><strong>Output:</strong> Topics: [(0, '0.123*"nlp" + 0.456*"learning"'), (1, '0.789*"ai" + 0.234*"amazing"')]</p>
+            translator = pipeline("translation_en_to_fr")
+            text = "Hello, how are you?"
+            translated = translator(text)
+            print("Translated Text:", translated[0]['translation_text'])
+        </code></pre>
+        <p><strong>Output:</strong> Translated Text: Bonjour, comment ça va ?</p>
         </section>
     </div>
     <footer>

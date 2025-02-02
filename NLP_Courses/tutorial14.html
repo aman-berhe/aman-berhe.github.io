@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Summarization</title>
+    <title>Question Answering</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .course-list ul {
@@ -59,7 +59,7 @@
                 <li><a href="tutorial7.html"> Word Embeddings</a></li>
                 <li><a href="tutorial8.html">Named Entity Recognition (NER)</a></li>
                 <li><a href="tutorial9.html">Sentiment Analysis</a></li>
-                <li><a href="tutorial10.html">Text Classification</a></li>
+                <li><a href="tutorial10.html">Text Generation</a></li>
                 <li><a href="tutorial11.html">Topic Modeling</a></li>
                 <li><a href="tutorial12.html">Machine Translation</a></li>
                 <li><a href="tutorial13.html">Text Summarization</a></li>
@@ -70,21 +70,20 @@
         </div>
     <div class="container">
         <section id="about">
-        <h1>Text Summarization</h1>
-        <p>Text summarization generates a concise summary of a longer text.</p>
+        <h1>Question Answering</h1>
+        <p>Question answering systems retrieve answers to questions from a given context.</p>
         
-        <h2>Python Example: Summarization with Hugging Face</h2>
+        <h2>Python Example: QA with Hugging Face</h2>
         <pre><code class="python">
-
             from transformers import pipeline
 
-            summarizer = pipeline("summarization")
-            text = "Natural Language Processing is a fascinating field. It enables machines to understand and generate human language. NLP has applications in chatbots, sentiment analysis, and more."
-            summary = summarizer(text, max_length=30, min_length=10, do_sample=False)
-            print("Summary:", summary[0]['summary_text'])
-
+            qa_pipeline = pipeline("question-answering")
+            context = "Natural Language Processing (NLP) is a field of AI focused on human language."
+            question = "What is NLP?"
+            result = qa_pipeline(question=question, context=context)
+            print("Answer:", result['answer'])
         </code></pre>
-        <p><strong>Output:</strong> Summary: NLP is a fascinating field with applications in chatbots and sentiment analysis.</p>
+        <p><strong>Output:</strong> Answer: a field of AI focused on human language</p>
         </section>
     </div>
     <footer>
